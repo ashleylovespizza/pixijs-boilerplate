@@ -1,12 +1,15 @@
 $(document).ready(function() {
 
 	// create an new instance of a pixi stage
+    // root of the display tree
     var stage = new PIXI.Stage(0x000000);
 
     // create a renderer instance.
+    // every time you render you paint something to the screen - run every frame
     var renderer = PIXI.autoDetectRenderer(window.innerWidth, window.innerHeight);
  
     // add the renderer view element to the DOM
+    // The canvas element that everything is drawn to
     document.body.appendChild( renderer.view );
 
     var tireSprite = new PIXI.Sprite.fromImage( "images/tire.png" );
